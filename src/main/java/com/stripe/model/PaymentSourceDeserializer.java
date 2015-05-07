@@ -22,6 +22,7 @@ public class PaymentSourceDeserializer implements JsonDeserializer<PaymentSource
     public static Map<String, Class<?>> getTypeToClazz() {
         if (PaymentSourceDeserializer.typeToClazz == null) {
             HashMap<String, Class<?>> mapping = new HashMap<String, Class<?>>();
+            mapping.put("bank_account", BankAccount.class);
             mapping.put("bitcoin_receiver", BitcoinReceiver.class);
             mapping.put("card", Card.class);
             mapping.put("alipay_account", AlipayAccount.class);
